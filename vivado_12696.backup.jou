@@ -1,0 +1,148 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Fri Nov 28 14:46:59 2025
+# Process ID: 12696
+# Current directory: C:/school/2025_2/ECE/final3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent33764 C:\school\2025_2\ECE\final3\project_1.xpr
+# Log file: C:/school/2025_2/ECE/final3/vivado.log
+# Journal file: C:/school/2025_2/ECE/final3\vivado.jou
+# Running On        :BOOK-4TE58G2232
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26200
+# Processor Detail  :13th Gen Intel(R) Core(TM) i7-1360P
+# CPU Frequency     :2611 MHz
+# CPU Physical cores:12
+# CPU Logical cores :16
+# Host memory       :16718 MB
+# Swap memory       :10737 MB
+# Total Virtual     :27455 MB
+# Available Virtual :10467 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/school/2025_2/ECE/final3/project_1.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/school/2025_2/ECE/final3/project_1.runs/impl_1/top_system.bit} [get_hw_devices xc7s75_0]
+current_hw_device [get_hw_devices xc7s75_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s75_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7s75_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s75_0]
+set_property PROGRAM.FILE {C:/school/2025_2/ECE/final3/project_1.runs/impl_1/top_system.bit} [get_hw_devices xc7s75_0]
+program_hw_devices [get_hw_devices xc7s75_0]
+refresh_hw_device [lindex [get_hw_devices xc7s75_0] 0]
+close_hw_manager
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/school/2025_2/ECE/final3/project_1.runs/impl_1/top_system.bit} [get_hw_devices xc7s75_0]
+current_hw_device [get_hw_devices xc7s75_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s75_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7s75_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s75_0]
+set_property PROGRAM.FILE {C:/school/2025_2/ECE/final3/project_1.runs/impl_1/top_system.bit} [get_hw_devices xc7s75_0]
+program_hw_devices [get_hw_devices xc7s75_0]
+refresh_hw_device [lindex [get_hw_devices xc7s75_0] 0]
+add_files -norecurse C:/school/2025_2/ECE/final3/metronome.v
+update_compile_order -fileset sources_1
+close_hw_manager
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_design
+open_run impl_1
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+place_ports servo_out AA22
+set_property IOSTANDARD LVCMOS33 [get_ports [list servo_out]]
+save_constraints
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/school/2025_2/ECE/final3/project_1.runs/impl_1/top_system.bit} [get_hw_devices xc7s75_0]
+current_hw_device [get_hw_devices xc7s75_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s75_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7s75_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s75_0]
+set_property PROGRAM.FILE {C:/school/2025_2/ECE/final3/project_1.runs/impl_1/top_system.bit} [get_hw_devices xc7s75_0]
+program_hw_devices [get_hw_devices xc7s75_0]
+refresh_hw_device [lindex [get_hw_devices xc7s75_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7s75_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s75_0]
+set_property PROGRAM.FILE {C:/school/2025_2/ECE/final3/project_1.runs/impl_1/top_system.bit} [get_hw_devices xc7s75_0]
+program_hw_devices [get_hw_devices xc7s75_0]
+refresh_hw_device [lindex [get_hw_devices xc7s75_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7s75_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s75_0]
+set_property PROGRAM.FILE {C:/school/2025_2/ECE/final3/project_1.runs/impl_1/top_system.bit} [get_hw_devices xc7s75_0]
+program_hw_devices [get_hw_devices xc7s75_0]
+refresh_hw_device [lindex [get_hw_devices xc7s75_0] 0]
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+close_hw_manager
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/school/2025_2/ECE/final3/project_1.runs/impl_1/top_system.bit} [get_hw_devices xc7s75_0]
+current_hw_device [get_hw_devices xc7s75_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s75_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7s75_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s75_0]
+set_property PROGRAM.FILE {C:/school/2025_2/ECE/final3/project_1.runs/impl_1/top_system.bit} [get_hw_devices xc7s75_0]
+program_hw_devices [get_hw_devices xc7s75_0]
+refresh_hw_device [lindex [get_hw_devices xc7s75_0] 0]
+add_files -norecurse C:/school/2025_2/ECE/final3/dday.v
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+close_hw_manager
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/school/2025_2/ECE/final3/project_1.runs/impl_1/top_system.bit} [get_hw_devices xc7s75_0]
+current_hw_device [get_hw_devices xc7s75_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s75_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7s75_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s75_0]
+set_property PROGRAM.FILE {C:/school/2025_2/ECE/final3/project_1.runs/impl_1/top_system.bit} [get_hw_devices xc7s75_0]
+program_hw_devices [get_hw_devices xc7s75_0]
+refresh_hw_device [lindex [get_hw_devices xc7s75_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+add_files -norecurse C:/school/2025_2/ECE/final3/reaction_game.v
+reset_run synth_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7s75_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s75_0]
+set_property PROGRAM.FILE {C:/school/2025_2/ECE/final3/project_1.runs/impl_1/top_system.bit} [get_hw_devices xc7s75_0]
+program_hw_devices [get_hw_devices xc7s75_0]
+refresh_hw_device [lindex [get_hw_devices xc7s75_0] 0]

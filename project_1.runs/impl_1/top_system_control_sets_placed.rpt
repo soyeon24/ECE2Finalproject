@@ -1,0 +1,137 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Dec 12 15:51:20 2025
+| Host         : BOOK-4TE58G2232 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_system_control_sets_placed.rpt
+| Design       : top_system
+| Device       : xc7s75
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    59 |
+|    Minimum number of control sets                        |    59 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   185 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    59 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |    33 |
+| >= 6 to < 8        |    13 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     3 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     4 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              40 |           17 |
+| No           | No                    | Yes                    |             259 |          101 |
+| No           | Yes                   | No                     |             115 |           46 |
+| Yes          | No                    | No                     |               8 |            5 |
+| Yes          | No                    | Yes                    |             213 |           82 |
+| Yes          | Yes                   | No                     |              84 |           50 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------+------------------------------------------+-------------------------------------+------------------+----------------+--------------+
+|   Clock Signal   |               Enable Signal              |           Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------+------------------------------------------+-------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG   | u_alarm_sound/alm_h_ten[3]_i_1__0_n_0    | rst_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_timer/m_one                            | rst_IBUF                            |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG   | u_timer/s_one                            | rst_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_setting/h_ten[3]_i_1__1_n_0            | rst_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_timer/h_one                            | rst_IBUF                            |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG   | u_setting/m_one[3]_i_1__2_n_0            | rst_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_dday/t_m_one[3]_i_1_n_0                | rst_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_setting/h_one[3]_i_1__1_n_0            | rst_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_menu/cursor_mode[3]_i_1_n_0            | rst_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_setting/s_one                          | rst_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_alarm_sound/alm_h_one[3]_i_1_n_0       | rst_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_alarm_sound/alm_m_one[3]_i_1__0_n_0    | rst_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_setting/E[0]                           | rst_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_alarm_sound/alm_s_one[3]_i_1__0_n_0    | rst_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_alarm/alm_s_one[3]_i_1_n_0             | rst_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_date/d_ten[3]_i_1_n_0                  | rst_IBUF                            |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG   | u_date/d_one[3]_i_1_n_0                  | rst_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_date/m_ten[3]_i_1_n_0                  | rst_IBUF                            |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG   | u_date/m_one[3]_i_1__3_n_0               | rst_IBUF                            |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG   | u_date/y_one[3]_i_1_n_0                  | rst_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_date/y_ten[3]_i_1_n_0                  | rst_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_stopwatch/m_one[3]_i_1__0_n_0          | rst_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_watch/h_one[3]_i_1_n_0                 | rst_IBUF                            |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG   | u_watch/m_one[3]_i_1_n_0                 | rst_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_stopwatch/s_one[3]_i_1_n_0             | rst_IBUF                            |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG   | u_dday/t_d_one[3]_i_1_n_0                | rst_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_alarm/alm_h_one[3]_i_1__0_n_0          | rst_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_alarm/alm_h_ten[3]_i_1_n_0             | rst_IBUF                            |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG   | u_alarm/alm_m_one[3]_i_1_n_0             | rst_IBUF                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_timer/h_ten                            | rst_IBUF                            |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG   | u_dday/FSM_onehot_state[4]_i_1_n_0       | rst_IBUF                            |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG   | u_music/note_idx[4]_i_1_n_0              | rst_IBUF                            |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG   | u_reaction/seg_com_reg[4]_i_1__8_n_0     | rst_IBUF                            |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG   |                                          | u_timer/seg_com[5]_i_1_n_0          |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG   |                                          | u_setting/seg_com_reg[5]_i_1__0_n_0 |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG   | u_music/seg_data_reg                     | rst_IBUF                            |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG   | u_watch/h_ten[5]_i_1_n_0                 | rst_IBUF                            |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG   | u_alarm/seg_data_reg[7]_i_1__1_n_0       | rst_IBUF                            |                5 |              7 |         1.40 |
+|  clk_IBUF_BUFG   | u_metronome/seg_data_reg[7]_i_1__4_n_0   | rst_IBUF                            |                5 |              7 |         1.40 |
+|  clk_IBUF_BUFG   | u_date/seg_data_reg[7]_i_1__2_n_0        | rst_IBUF                            |                6 |              7 |         1.17 |
+|  clk_IBUF_BUFG   | u_dday/seg_data_reg[7]_i_1__5_n_0        | rst_IBUF                            |                4 |              7 |         1.75 |
+|  clk_IBUF_BUFG   | u_reaction/seg_data_reg[7]_i_1__6_n_0    | rst_IBUF                            |                3 |              7 |         2.33 |
+|  clk_IBUF_BUFG   | u_setting/p_0_in_0                       | rst_IBUF                            |                5 |              7 |         1.40 |
+|  clk_IBUF_BUFG   | u_world/seg_data_reg[7]_i_1__8_n_0       | rst_IBUF                            |                7 |              7 |         1.00 |
+|  clk_IBUF_BUFG   | u_setting/FSM_onehot_state[6]_i_1_n_0    | rst_IBUF                            |                2 |              7 |         3.50 |
+|  clk_IBUF_BUFG   | u_timer/seg_data[7]_i_1_n_0              | rst_IBUF                            |                5 |              7 |         1.40 |
+|  clk_IBUF_BUFG   | u_music/seg_data_reg[7]_i_1__7_n_0       |                                     |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG   | u_music/tone_period[7]_i_1_n_0           | rst_IBUF                            |                6 |              8 |         1.33 |
+|  lcd_e_OBUF_BUFG | u_lcd/lcd_rs_i_1_n_0                     | rst_IBUF                            |                9 |              9 |         1.00 |
+|  clk_IBUF_BUFG   | u_reaction/react_time[9]_i_1_n_0         | rst_IBUF                            |                5 |             10 |         2.00 |
+|  clk_IBUF_BUFG   | u_stopwatch/ms_cnt[9]_i_1__0_n_0         | rst_IBUF                            |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG   | u_timer/ms_cnt                           | rst_IBUF                            |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG   | u_alarm_sound/seg_data_reg[7]_i_1__3_n_0 | rst_IBUF                            |                4 |             13 |         3.25 |
+|  clk_IBUF_BUFG   | u_reaction/wait_cnt[12]_i_1_n_0          | rst_IBUF                            |                3 |             13 |         4.33 |
+|  clk_IBUF_BUFG   | u_stopwatch/lap_s_one                    | rst_IBUF                            |                3 |             14 |         4.67 |
+|  clk_IBUF_BUFG   |                                          | u_music/tone_cnt[0]_i_1_n_0         |                8 |             32 |         4.00 |
+|  lcd_e_OBUF_BUFG |                                          | rst_IBUF                            |               19 |             36 |         1.89 |
+|  clk_IBUF_BUFG   |                                          |                                     |               17 |             40 |         2.35 |
+|  clk_IBUF_BUFG   |                                          | rst_IBUF                            |              117 |            294 |         2.51 |
++------------------+------------------------------------------+-------------------------------------+------------------+----------------+--------------+
+
+
