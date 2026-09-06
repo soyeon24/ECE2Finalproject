@@ -1,0 +1,8 @@
+# Vivado build output
+.Xil/
+*.cache/
+*.runs/
+*.hw/
+*.sim/
+*.jou
+*.log
